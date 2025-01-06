@@ -63,7 +63,7 @@ async function getSearch(title) {
     fallback(`${title}`);
   }
 }
-
+//heter fallback då den används som fallback funktion i titelfunktionen. Om inga titlar hittas, söks istället automatiskt personer med samma input//
 async function fallback(personName) {
   try {
     const url = `${BASE_URL}/search/person?api_key=${KEY}&query=${encodeURIComponent(
