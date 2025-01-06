@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="output.css">
+   <script src="jquery-3.7.1.min.js" defer></script>
+    <script src="index.js" type="module"></script>
+    <title>Slutprojekt</title>
+</head>
+<body>
+    <div class="mainTitle">Slutprojekt JS1</div>
+    <div class="wrapper">
+    <form action="submit">
+        <div class="searchBox">
+        <label for="titleInput">Search Movies</label>
+        <input type="text" id="titleInput">
+        <button type="submit" id="submitTitle">Search</button>
+    </div>
+<div class="searchBox">
+        <label for="personInput">Search persons</label>
+        <input type="text" id="personInput">
+        <button type="submit" id="submitPerson">Search</button>
+    </div>
+    </form>
+    <button id="clearBtn">Clear</button>
+    <button id="showMost">Show 10 Most Popular Movies </button>
+    <button id="showTop">Show Top 10 Movies</button>
+    <div class="topMoviesWrapper"> <h2 class="moviesWrapperH2">Top 10 Rated Movies Right Now</h2>
+    <div class="topMovies">
+    </div>
+    </div>
+ 
+    <div class="mostMoviesWrapper"> <h2 class="moviesWrapperH2">Most Popular Movies Right Now</h2>
+        <div class="mostMovies">
+        </div>
+    </div>
+    
+</body>
+</html>

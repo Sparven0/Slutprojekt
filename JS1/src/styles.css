@@ -1,0 +1,337 @@
+.mainTitle{
+    font-size: 30px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.dataBox {
+  max-width: 900px;
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.dataBox p {
+  color: rgb(116, 116, 116);
+  margin-bottom: 20px;
+}
+
+.searchBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.searchBox label {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.searchBox input {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.searchBox button {
+  padding: 10px 15px;
+  background-color: rgb(248, 104, 231);
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.searchBox button:hover {
+  background-color: rgb(170, 59, 133);
+}
+
+/* Mycket av stylingen för 'cardsen' som visar filmerna är gjord med Ai. Det går mycket snabbare och har ingen betydelse */
+#clearBtn {
+  padding: 10px 15px;
+  background-color: rgb(247, 21, 40);
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#clearBtn:hover {
+  background-color: rgb(75, 130, 210);
+}
+
+.title {
+  font-size: 25px;
+}
+.overview {
+  width: 50%;
+  margin-top: 10px;
+}
+#showMost {
+  padding: 10px 15px;
+  background-color: rgb(248, 104, 231);
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#showMost:hover {
+  background-color: rgb(75, 130, 210);
+}
+#showMost {
+  padding: 10px 15px;
+  background-color: rgb(248, 104, 231);
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#showMost:hover {
+  background-color: rgb(75, 130, 210);
+}
+
+#showTop {
+  padding: 10px 15px;
+  background-color: rgb(248, 104, 231);
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#showTop:hover {
+  background-color: rgb(75, 130, 210);
+}
+#showTop {
+  padding: 10px 15px;
+  background-color: rgb(248, 104, 231);
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#showTop:hover {
+  background-color: rgb(75, 130, 210);
+}
+
+.noDisplay {
+  display: none;
+}
+
+.mostMoviesWrapper {
+  display: none;
+}
+
+.topMoviesWrapper {
+  display: none;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.showTopMovies {
+  margin-top: 100px;
+  display: block;
+  animation: fade 500ms;
+}
+
+
+.moviesWrapperH2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popDiv{
+    width: 200px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.mostMovies{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.topMovies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.topMovies div {
+  width: 200px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.topMovies img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.topMovies h1 {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.topMovies p {
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 5px;
+}
+
+
+
+.dataBox button {
+  padding: 8px 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 100px;
+}
+
+.knownForContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.knownForItem {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.knownForItem span {
+  font-size: 1em;
+  color: #555;
+  width: 48%;
+}
+
+.knownForItem span:first-child {
+  text-align: left;
+}
+
+.knownForItem span:last-child {
+  text-align: right;
+}
+
+.dataBox img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.dataBox h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.error-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.error-message-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.error-close-button {
+  background-color: #ff0000;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.error-close-button:hover {
+  background-color: #ff4d4d;
+}
