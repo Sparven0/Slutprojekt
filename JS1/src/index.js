@@ -54,15 +54,18 @@ async function getSearch(title) {
 
       dataBox.append(closeData, titleEl, overviewEl, imgEl);
     });
+
+    if (data.results.length === 0) {
+      fallback(`${title}`);
+    } else if(
+      showError("Could not find title, try different spelling!")
+    );
   } catch (e) {
     console.log("ERROR", e);
-    fallback(`${title}`);
-  }
-  if (data.results.length === 0) {
-    showError("Could not find title, try different spelling!");
+    
   }
 }
-//heter fallback då den används som fallback funktion i titelfunktionen. Om inga titlar hittas, söks istället automatiskt personer med samma input//
+
 async function fallback(personName) {
   try {
     const url = `${BASE_URL}/search/person?api_key=${KEY}&query=${encodeURIComponent(
@@ -110,7 +113,7 @@ async function fallback(personName) {
     databox.append(profilePic, personsName, knownForContainer);
   } catch (e) {
     console.log("ERROR", e);
-    showError("Could not find person, try different spelling!");
+    showError("Could not find anything there, try different spelling!");
   }
 }
 
