@@ -54,14 +54,14 @@ async function getSearch(title) {
 
       dataBox.append(closeData, titleEl, overviewEl, imgEl);
     });
-
+    
+// Om ingen filmtitel hittas, sökes istället efter personer med samma input. Därmed används samma felmeddelande om varken film eller person hittas
     if (data.results.length === 0) {
       fallback(`${title}`);
-    } else if(
-      showError("Could not find title, try different spelling!")
-    );
+    }
   } catch (e) {
     console.log("ERROR", e);
+    
     
   }
 }
@@ -98,7 +98,6 @@ async function fallback(personName) {
 
     data.results[0].known_for.forEach((item) => {
       const knownForItem = $("<div>").addClass("knownForItem");
-
       const titleElement = $("<span>").text(
         `Famous feature: ${item.original_title}`
       );
