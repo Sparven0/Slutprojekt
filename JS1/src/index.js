@@ -54,13 +54,12 @@ async function getSearch(title) {
 
       dataBox.append(closeData, titleEl, overviewEl, imgEl);
     });
-
-    if (data.results.length === 0) {
-      showError("Could not find title, try different spelling!");
-    }
   } catch (e) {
     console.log("ERROR", e);
     fallback(`${title}`);
+  }
+  if (data.results.length === 0) {
+    showError("Could not find title, try different spelling!");
   }
 }
 //heter fallback då den används som fallback funktion i titelfunktionen. Om inga titlar hittas, söks istället automatiskt personer med samma input//
