@@ -16,6 +16,7 @@ const showTopBtn = $("#showTop");
 const moviesWrapper = $(".topMoviesWrapper");
 const mostWrapper = $(".mostMoviesWrapper");
 const clearBtn = $("#clearBtn");
+const contentDiv = document.querySelector('.contentDiv')
 
 
 async function getSearch(title) {
@@ -31,7 +32,7 @@ async function getSearch(title) {
       const titlecontent = movie.original_title;
       const imgsrc = movie.poster_path;
 
-      const dataBox = $("<div>").addClass("dataBox").appendTo("body");
+      const dataBox = $("<div>").addClass("dataBox").appendTo(contentDiv);
 
       const titleEl = $("<h1>").addClass("title").text(titlecontent);
       const overviewEl = $("<p>")
@@ -118,6 +119,10 @@ async function fallback(personName) {
 
 submitPerson.on("click", (event) => {
   event.preventDefault();
+  const prevEl = document.querySelector('.dataBox');
+  if(prevEl){
+    prevEl.remove()
+  }
   const name = personInput.val();
   fallback(`${name}`);
 });
@@ -128,6 +133,10 @@ clearBtn.on("click", () => {
 
 submitTitle.on("click", (event) => {
   event.preventDefault();
+  const prevEl = document.querySelectorAll('.dataBox');
+  prevEl.forEach(databox => {
+    databox.remove();
+  })
   const title = movieTitleInput.val();
   getSearch(`${title}`);
 });
